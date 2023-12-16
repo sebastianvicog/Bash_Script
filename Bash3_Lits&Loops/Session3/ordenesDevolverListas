@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Autor: Sebastián Vico Guzmán
+# Descripcion: Ejemplo de uso de listas
+
+resultado1=$( ls )
+resultado2=`pwd`
+
+echo "${resultado1}"
+
+echo "${resultado2}"

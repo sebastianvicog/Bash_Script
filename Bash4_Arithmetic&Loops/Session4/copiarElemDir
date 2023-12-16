@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Autor: Sebastián Vico Guzmán
+# Descripcion: Recibe como minimo 2 argumentos. El ultimo es un nombre de un directorio y los primeros son 
+# nombres de archivos o directorio. El script debe copiar los archivos o directorios cuyos nombres
+# se dan en los n-1 primeros argumentos, en el directorio que se pasa como ultimo argumento.
+
+# Comprobacion de minimo 2 elementos
+if [ ${#} -ge 2 ]
+then
+	if [ ! -d ${!#} ]
+	then
+		echo "Error. EL ultimo argumento debe de ser un directorio"
+	else
+		i=1 # i=0 es la orden que ejecutamos (./copiarElementos)
+		
+		# Mientras que no llegue al ultimo argumento (el directorio donde copiar los datos)
+		while [ ${i} -le $(( ${#}-1 )) ]
+		do
+			# Si el parametro posicional existe
+			if [ -e ${!i} ]
+			then
+				cp -r ${!i} ${!#} # Copia el paramtro en el directorio
+			fi
+			
+			${i}=$(( ${i} + 1 )) # Incrementar i
+		done
+	fi
+else
+	echo "El numero de argumentos debe de ser minimo 2"
+fi

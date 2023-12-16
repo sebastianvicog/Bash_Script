@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Autor: Sebastián Vico Guzmán
+# Descripcion: Shell que reciba como parametro un nombre de usuario y que compruebe si existe en el
+# sistema o no
+
+# Comprobacion numero de parametros
+if [ ${#} -eq 1 ]
+then
+	while read linea 
+	do
+		usuario=$( echo ${linea} | cut -d: -f1 ) # Quiero dato 1 del archivo, donde pone el usuario
+		if [ ${1} = ${usuario} ]
+		then
+			echo "El usuario ${1} existe en el sistema"
+			exit
+		fi
+	done < /etc/passwd # Se usa este archivo
+	
+	echo "EL usuario ${1} no existe en el sistema"
+	
+else
+	echo "El numero de argumentos debe ser 1"
+fi

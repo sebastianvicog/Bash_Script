@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Autor: Sebastián Vico Guzmán
+# Descripcion: Borra aquellos archivos del directorio ~/bin que no sean ejecutables
+
+archivos=`ls ~/bin`
+
+for a in ${archivos}
+do
+	# Si non es un directorio
+	if [ ! -d ~/bin/${a} ]
+	then	
+		# Si no es ejecutable
+		if [ ! -e ~/bin/${a} ]
+		then
+			# Se borra
+			rm ~/bin/${a}
+		fi
+	fi
+done
+
+
+

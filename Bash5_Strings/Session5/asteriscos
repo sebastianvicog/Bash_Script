@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Autor: Sebastián Vico Guzmán
+# Descripcion: Shell que reciba como argumento un numero menor o igual a 20 y escribe por pantalla una puiramide 
+# de asteriscos de tantos pisos como el numero que se indica
+
+if [ ${#} -eq 1 ]
+then
+	if [[ ${1} =~ ^[0-9]+$ ]]
+	then
+		if [[ ${1} -le 20 ]]
+		then
+			caden="********************"
+			iter=1
+			while [ ${iter} -le ${1} ]
+			do
+				printf "%${1}.${iter}s%-${1}.${iter}s\n" \ "${caden}" "${caden}"
+				iter=$(( ${iter}+1 ))
+			done
+			
+		else
+			echo "El parametero debe de ser igual o menor que 20"
+		fi
+	else
+		echo "El parametero debe de ser un numero"
+	fi
+else
+	echo "EL numero de argumentos debe de ser 1."
+fi
+

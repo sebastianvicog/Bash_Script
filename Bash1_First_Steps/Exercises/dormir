@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Autor: Sebastian Vico
+# Description: Este guion duerme durante x segundos
+
+echo "Espera $1 segundos"
+sleep $1
+echo "Completado"

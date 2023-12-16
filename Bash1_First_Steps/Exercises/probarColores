@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Autor: Sebastián Vico Guzmán
+# Descripcion: Probar colores en la salida (en la terminal)
+
+ROJO='\e[0;31m'
+cyan='\e[0;36m'
+verde='\e[0;32m'
+blanco='\e[0;37m'
+
+echo -e "${ROJO}Vamos ${cyan}a probar ${verde}diferentes ${blanco}colores."

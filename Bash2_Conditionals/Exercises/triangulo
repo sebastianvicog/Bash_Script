@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Autor: Sebastián Vico Guzmán
+# Descripcion: Script al que pasan 3 argumentos y devuelve el tipo de triaungulo utilizando las siguientes
+# condiciones: 
+#	Escaleno: Cada lado tiene una longitud diferente
+# 	Isosceles: 2 lados con la misma longitud
+#	Equilatero: Los 3 lados iguales
+
+if [ "${#}" -ne 3  ]
+then
+	echo "El numero de argumentos debe ser 3"
+	exit
+fi
+
+# Comprobar que los argumentos son numeros
+if [[ "${1}" =~ ^[0-9]+$ ]] && [[ "${2}" =~ ^[0-9]+$ ]] && [[ "${3}" =~ ^[0-9]+$ ]]
+then
+	if [ ${1} -eq ${2} ] && [ ${1} -eq ${3} ]
+	then
+		echo "El triangulo es equilatero"
+	else
+		if [ ${1} -eq ${2} ] || [ ${1} -eq ${3} ] || [ ${2} -eq ${3} ]
+		then
+			echo "El triangulo es isosceles"
+		else
+			echo "El triaungulo es escaleno"
+		fi 
+	fi
+else 
+	echo "Los argumentos deben ser numeros"
+fi

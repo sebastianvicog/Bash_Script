@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Autor: Sebastián Vico Guzmán
+# Descripcion: Escribe texto con y sin saltos de linea y con tabuladores
+
+echo -n "Imprimiento texto sin nueva linea detras"
+echo "Imprimiendo texto con nueva linea detras"
+echo -e "\nInterpretacion \tCaracteres \tTabulador\n"
+echo "\nNO Interpretacion \tCaracteres \tTabulador\n"
+
+# Mostrar los parametros de entrada con tabulador
+echo -e "\nLos 3 parametros de entrada son: \t$1 \t$2 \t$3\n"

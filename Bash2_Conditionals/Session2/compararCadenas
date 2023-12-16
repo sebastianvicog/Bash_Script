@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Autor: Sebastián Vico Guzmán
+# Descripcion: Comprueba si los dos argumentos que se dan son iguales.
+
+if [ ${#} -ne 2 ]
+then 
+	echo "Error. Deben pasarse exactamente 2 argumentos."
+else
+	if [ ${1} = ${2} ]
+	then 
+		echo "Error. Los parametros deben ser distintos."
+	fi
+fi

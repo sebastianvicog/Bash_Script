@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Autor: Sebastián Vico Guzmán
+# Descricion: Muestra informacion relevante sobre la ejecucion de este shell script 
+#             usando los parametros especiales 
+
+echo La ruta del script es: ${0}
+echo El numero de parametros posicionales es: ${#}
+echo Los parametros son: ${*}
+echo El PID del proceso actual es: ${$}

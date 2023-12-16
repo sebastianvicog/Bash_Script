@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Autor: Sebastián Vico Guzmán
+# Descripcion: Imprimir por pantalla la frase ¡Hola Mundo!
+
+echo ¡Hola Mundo!

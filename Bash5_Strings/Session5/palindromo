@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Autor: Sebastián Vico Guzmán
+# Descripcion: Escribe un shell script que reciba como argumento una palabra y que la escriba al reves 
+# (su palindromo)
+
+if [ ${#} -eq 1 ]
+then
+	i=$(( ${#1} - 1 )) # -1 porque al recorrer las letras de la palabra va hasta la posicion 0
+	
+	# Recorrer todos los caracteres de la cadena que nos dan de atras hacia alante
+	while [ ${i} -ge 0 ]
+	do
+		echo -n ${1:${i}:1} # Opcion -n para que no escriba un salto de linea
+		i=$(( ${i} - 1 ))
+	done
+	
+	echo # Salto de linea al final de la palabra
+	
+else
+	
+	echo "Error. El numero de argumentos debe de ser uno."
+fi

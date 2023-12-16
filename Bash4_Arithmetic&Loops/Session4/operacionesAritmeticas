@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Autor: Sebastián Vico Guzmán
+# Descripcion: Borra aquellos archivos del directorio ~/bin que no sean ejecutables. Al final debe escribir 
+# el numero de archivos que ha borrado
+
+archivos=$( ls ~/bin ) # lo mismo que poner: archivos=`ls ~/bin` 
+contBorrados=0 # contador del numero de archivos borrados
+
+for i in ${archivos}
+do
+	if [ -f ${i} ] && [ ! -e ${i} ]
+	then
+		rm ${i}
+		contBorrados=$(( ${contBorrados}+1 ))
+	fi
+done
+
+echo " El numero de archivos borrados es: ${contBorrados}"
+

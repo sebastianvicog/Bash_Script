@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Autor: Sebastián Vico Guzmán
+# Descripcion: Recorrer una lista a traves del bucle for
+
+frutas="manzana piña platano"
+
+for f in ${frutas}
+do
+	echo "A mi me gustan las ${f}s"
+done

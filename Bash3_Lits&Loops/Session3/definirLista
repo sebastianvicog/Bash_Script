@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Autor: Sebastián Vico Guzmán
+# Descripcion: Ejemplo de uso de una lista
+
+frutas="manzana piña pera"
+echo "${frutas}"
+
+frutas="${frutas} papaya"
+echo "${frutas}"

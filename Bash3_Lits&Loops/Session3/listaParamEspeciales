@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Autor: Sebastián Vico Guzmán
+# Descripcion: Muestra las diferencias entre los parametros especiales * y @
+
+echo "-----Dolar asterisco: "${*}
+echo "Dolar asterisco entre comillas:${*}"
+echo "-----Dolar arroba: "${@}
+echo "Dolar arroba entre comillas:${@}"
+
+echo "-----Bucle sobre dolar asterisco"
+for i in ${*}
+do
+	echo "Parametro: ${i}"
+done
+
+echo "Bucle sobre dolar asterisco entre comillas"
+for i in "${*}"
+do
+	echo "Parametro: ${i}"
+done
+
+echo "-----Bucle sobre dolar arroba"
+for i in ${@}
+do
+	echo "Parametro: ${i}"
+done
+
+echo "Bucle sobre dolar arroba entre comillas"
+for i in "${@}"
+do
+	echo "Parametro: ${i}"
+done

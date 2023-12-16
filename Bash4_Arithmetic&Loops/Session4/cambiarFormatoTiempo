@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Autor: Sebastián Vico Guzmán
+# Descripcion: Dado un numero de segundos, imprimir el numero de dias, horas, minutos y segundos equivalentes
+
+seg_en_dia=86400
+seg_en_hora=3600
+seg_en_minuto=60
+
+dias=$(( ${1} / ${seg_en_dia} ))
+seg_restantes=$(( ${1} % ${seg_en_dia} ))
+horas=$(( ${seg_restantes} / ${seg_en_hora} ))
+seg_restantes=$(( ${seg_restantes} % ${seg_en_hora} ))
+minutos=$(( ${seg_restantes} / ${seg_en_minuto} ))
+seg_restantes=$(( ${seg_restantes} % ${seg_en_minuto} ))
+
+echo " ${dias} dias ${horas} horas ${minutos} minutos ${seg_restantes} segundos"

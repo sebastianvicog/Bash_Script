@@ -3,4 +3,4 @@
 # Autor: Sebastián Vico Guzmán
 # Descripcion: Imprime un saludo usando un parametro posicional
 
-echo Buenos dias $1 $2
+echo "Buenos dias $1 $2"

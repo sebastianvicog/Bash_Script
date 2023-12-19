@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Autor: Sebastián Vico Guzmán
-# Descripcion: Script que saque una lista por pantalla de los usuarios del sistema bloqueados.
+# Descripcion: Script that list blocked users on the screen.
 
 echo "Los usuarios bloqueados son: "
 cont=0

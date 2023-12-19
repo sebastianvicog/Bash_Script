@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Autor: Sebastian Vico
-# Descripcion: script que recibe una lista de directorios y un tamaño, si el tamaño es mayor o igual se renombra 
-# a mayusculas si es menor a minusculas. Tambier poner cuantos se han renombrado a mayus y cuantos a minus
-
-# DOY POR HECHO QUE EL PRIMER ARGUMENTO ES EL TAMAÑO Y QUE TE LO DAN EN BYTES
+# Descripcion: script that receives a list of directories and a size (bytes).
+#			   If the size is greater or equal, it is renamed to uppercase.
+#			   If it is smaller it is renamed to lower case. 
+#			   Also put how many have been renamed to uppercase and how many to lowercase.
 
 # Comprobar que el numero de argumentos es mayor o igual a 2
 if [ ${#} -ge 2 ]

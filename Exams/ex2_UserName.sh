@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Autor: Sebastian Vico
-# Descripcion: script que recibe exactamente un nombre de usuario, si existe que te diga cuantos usuarios hay 
-# con ese nombre
+# Descripcion: script that receives exactly one user name.
+#			   if it exists it will tell you how many users there are with that name
 
 # Comprobar que recibe exactamente un argumento
 if [ ${#} -eq 1 ]

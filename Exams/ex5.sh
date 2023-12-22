@@ -1,11 +1,10 @@
 #!/bin/bash
 
-# Autor: Sebastian Vico
-# Descripcion: script que recibe una lista de nombres de archivos y calcula el tamaño total.
-# Sólo suma si es un fichero ordinario. Al final devuelve por pantalla el numero de ficheros ordinarios y el 
-# tamaño total
+# Author: Sebastián Vico Guzmán
+# Description: script that receives a list of filenames and calculates the total size.
+# 			   It only adds up if it is an ordinary file. 
+#			   At the end it returns on the screen the number of ordinary files and the total size
 
-# DOY POR HECHO QUE EL TAMAÑO ES EN BYTES
 
 # Comprobar que el numero de argumentos es minimo 1
 if [ ${#} -ge 1 ]

@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Autor: Sebastián Vico Guzmán
-# Descripcion: Script que reciba como argumento un numero, el UID de un usuario y que comrpuebe si existe en el sistema un usuario con ese UID. SI existe comprobar si ese usuario tiene el mismo UID y GID
+# Descripcion: Make a script that receive a number, (user's UID) and check if this exits in the system.
+#			   If it's exist check if this users have the same UID and GID.
 
 if [ ${#} -eq 1 ]
 then

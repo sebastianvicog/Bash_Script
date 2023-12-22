@@ -1,11 +1,9 @@
 #!/bin/bash
 
-# Autor: Sebastian Vico
-# Descripcion: script que recibe 3 argumentos: un nombre, una extensión y una lista de nombres de archivos
-# el script renombra todos los archivos de la lista al formato nombre-###.extension donde ### empieza en 000 y 
-# va aumentando
+# Author: Sebastián Vico Guzmán
+# Description: script that receives 3 arguments: a name, an extension and a list of file names 
+#			   the script renames all the files in the list to the format name-###.extension where ### starts at 000 and is incrementing 
 
-# DOY POR HECHO QUE LOS ARGUMENTOS SON ACCESIBLES DESDE EL DIRECTORIO ACTUAL
 
 # Comprobar que el numero de argumentos es de minimo 3
 if [ ${#} -ge 3 ]
